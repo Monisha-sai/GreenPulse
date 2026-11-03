@@ -1,0 +1,8 @@
+Model,Configuration,Scheduled,Unscheduled,Success_Percent,Energy_kWh,Carbon_kg_CO2,Average_Active_Servers
+M1,CPU_Memory,4722,278,94.44,16.781187,13.538258,0.3693
+M2,Energy_Aware,4723,277,94.46,12.837578,10.383290,0.2282
+M3,Carbon_Aware,4723,277,94.46,12.862626,10.403724,0.2296
+M4,Energy_Carbon,4723,277,94.46,12.833293,10.379790,0.2280
+M5,Full_Model,4723,277,94.46,12.833293,10.379790,0.2280
+M8,No_Consolidation,4723,277,94.46,12.833293,10.379790,0.2280
+M9,Normalized_No_Consolidation,4723,277,94.46,12.833293,10.379790,0.2280

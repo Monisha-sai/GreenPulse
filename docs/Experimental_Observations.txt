@@ -1,0 +1,31 @@
+GREENPULSE - EXPERIMENTAL OBSERVATIONS
+
+EXPERIMENTAL SETUP
+Dataset: Alibaba Cluster Trace 2018
+Tasks: 5000
+Main ablation sleep power ratio: 10%%
+Power model: Linear idle-to-peak
+Energy accounting: Event-driven time integration
+Carbon accounting: Regional grid factors
+Server locations: Simulated regional model
+
+MAIN FINDINGS
+1. Baseline energy: 16.781187 kWh
+2. Baseline carbon: 13.538258 kg CO2
+3. Full model energy: 12.833293 kWh
+4. Full model carbon: 10.379790 kg CO2
+5. Energy reduction: 23.53%%
+6. Carbon reduction: 23.33%%
+7. Baseline scheduled tasks: 4722
+8. Full model scheduled tasks: 4723
+
+CONSOLIDATION OBSERVATION
+Models 4, 5, 8 and 9 produced identical placement and environmental results.
+Consolidation scoring was verified separately through a diagnostic run.
+No independent measurable consolidation benefit was observed in these experiments.
+
+LIMITATIONS
+Server locations and carbon intensities are simulated inputs.
+Results are from trace-driven simulation, not physical data centers.
+Sleep power is an assumed proportion of idle power.
+The 5000-task dataset contains the first 5000 valid preprocessed tasks.

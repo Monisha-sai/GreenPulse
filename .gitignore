@@ -1,0 +1,57 @@
+# Java and Maven
+target/
+*.class
+*.jar
+*.war
+.mvn/wrapper/maven-wrapper.jar
+
+# Node.js and React
+node_modules/
+dist/
+build/
+.vite/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+application-secrets.properties
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local machine configuration
+local.properties
+# Large raw datasets
+datasets/raw/*
+!datasets/raw/.gitkeep
+
+# Generated experiment outputs
+simulation/output/
+simulation/outputs/
