@@ -1,0 +1,94 @@
+Sleep Power Ratio : 10%
+
+==========================================
+       GREENPULSE CONSOLIDATION MODEL
+==========================================
+Total Tasks Loaded : 5000
+
+Total Tasks      : 5000
+Scheduled Tasks  : 4723
+Unscheduled Tasks: 277
+Success Rate     : 94.46%
+
+CPU Failures     : 277
+Memory Failures  : 0
+CPU + Memory Fail: 0
+Other Failures   : 0
+
+Total Energy     : 12.833293 kWh
+Total Carbon     : 10.379790 kg CO2
+Average Score    : 0.104396
+Scheduling Decisions : 5000
+Total Scheduling Time : 16.362700 ms
+Average Scheduling Latency : 0.003273 ms
+Peak Active Servers : 3
+Average Active Servers : 0.2280
+Average Sleeping Servers : 2.7720
+Final Active Servers : 0
+Final Sleeping Servers : 3
+
+------------------------------------------
+SERVER ENERGY DISTRIBUTION
+------------------------------------------
+Server-1 : 644 tasks
+   Active       : false
+   Region       : Northern
+   Carbon Int.  : 0.7335 kg CO2/kWh
+   Energy       : 3.432062 kWh
+   Carbon       : 2.517417 kg CO2
+   Idle Power   : 150.00 W
+   Sleep Power  : 15.00 W
+   Peak Power   : 250.00 W
+Server-2 : 3903 tasks
+   Active       : false
+   Region       : Southern
+   Carbon Int.  : 0.8086 kg CO2/kWh
+   Energy       : 6.200535 kWh
+   Carbon       : 5.013753 kg CO2
+   Idle Power   : 120.00 W
+   Sleep Power  : 12.00 W
+   Peak Power   : 220.00 W
+Server-3 : 176 tasks
+   Active       : false
+   Region       : Western
+   Carbon Int.  : 0.8900 kg CO2/kWh
+   Energy       : 3.200696 kWh
+   Carbon       : 2.848620 kg CO2
+   Idle Power   : 180.00 W
+   Sleep Power  : 18.00 W
+   Peak Power   : 300.00 W
+
+==========================================
+      UNSCHEDULED TASK ANALYSIS
+==========================================
+CPU Capacity Failures: 277
+Memory Capacity Failures: 0
+CPU + Memory Failures: 0
+Other Failures: 0
+
+==========================================
+        FINAL SERVER UTILIZATION
+==========================================
+Server-1 CPU: 0.00% | Memory: 0.00% | Running Tasks: 0
+Server-2 CPU: 0.00% | Memory: 0.00% | Running Tasks: 0
+Server-3 CPU: 0.00% | Memory: 0.00% | Running Tasks: 0
+
+==========================================
+          ENVIRONMENTAL MODEL
+==========================================
+Placement Model  : Model 5
+CPU Weight       : 20%
+Memory Weight    : 20%
+Energy Weight    : 25%
+Carbon Weight    : 25%
+Consolidation    : 10%
+Power Model      : Linear idle-to-peak
+Sleep Model      : 10% of idle power
+Energy Model     : Event-driven time integration
+Task Energy      : Incremental energy estimate
+Carbon Model     : Regional grid factors
+Server Locations : Simulated regional model
+Energy Unit      : kWh
+Carbon Unit      : kg CO2
+
+GreenPulse consolidation scheduling completed.

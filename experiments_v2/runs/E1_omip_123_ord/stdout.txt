@@ -1,0 +1,79 @@
+
+==========================================
+          GREENPULSE MBFD-STYLE
+==========================================
+Server Iteration Order : 1-2-3
+
+Total Tasks Loaded : 5000
+
+==========================================
+          MBFD-STYLE RESULTS
+==========================================
+
+Total Tasks      : 5000
+Scheduled Tasks  : 4723
+Unscheduled Tasks: 277
+Success Rate     : 94.46%
+
+CPU Failures     : 277
+Memory Failures  : 0
+CPU + Memory Fail: 0
+Other Failures   : 0
+
+Total Energy     : 12.821120 kWh
+Total Carbon     : 10.370649 kg CO2
+Average Score    : 0.183205
+
+------------------------------------------
+SERVER ENERGY DISTRIBUTION
+------------------------------------------
+Server-1 : 649 tasks
+   Region       : Northern
+   Carbon Int.  : 0.7335 kg CO2/kWh
+   Energy       : 3.415436 kWh
+   Carbon       : 2.505222 kg CO2
+   Idle Power   : 150.00 W
+   Peak Power   : 250.00 W
+Server-2 : 3912 tasks
+   Region       : Southern
+   Carbon Int.  : 0.8086 kg CO2/kWh
+   Energy       : 6.211696 kWh
+   Carbon       : 5.022778 kg CO2
+   Idle Power   : 120.00 W
+   Peak Power   : 220.00 W
+Server-3 : 162 tasks
+   Region       : Western
+   Carbon Int.  : 0.8900 kg CO2/kWh
+   Energy       : 3.193988 kWh
+   Carbon       : 2.842649 kg CO2
+   Idle Power   : 180.00 W
+   Peak Power   : 300.00 W
+
+==========================================
+      UNSCHEDULED TASK ANALYSIS
+==========================================
+CPU Capacity Failures: 277
+Memory Capacity Failures: 0
+CPU + Memory Failures: 0
+Other Failures: 0
+
+==========================================
+        FINAL SERVER UTILIZATION
+==========================================
+Server-1 CPU: 0.00% | Memory: 0.00% | Running Tasks: 0
+Server-2 CPU: 0.00% | Memory: 0.00% | Running Tasks: 0
+Server-3 CPU: 0.00% | Memory: 0.00% | Running Tasks: 0
+
+==========================================
+          ENVIRONMENTAL MODEL
+==========================================
+Placement Model  : Online MBFD-style (minimum incremental power)
+Power Model      : Linear idle-to-peak
+Energy Model     : Event-driven time integration
+Carbon Model     : Regional grid factors
+Server Locations : Simulated regional model
+Carbon Intensity : Measurement only
+Energy Unit      : kWh
+Carbon Unit      : kg CO2
+
+Event-driven MBFD-style scheduling completed.

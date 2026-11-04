@@ -1,0 +1,564 @@
+{
+  "manifest_schema": "greenpulse-baseline-provenance-v1",
+  "project": "GreenPulse",
+  "generated_at_utc": "2026-11-03T14:07:52+00:00",
+  "repository_root": ".",
+  "git": {
+    "available": true,
+    "commit": "24b936b55d0e6e45cfeed9142307c57cafddbb94",
+    "branch": "main",
+    "working_tree_status_porcelain": "?? tools/make_manifest.py",
+    "working_tree_has_changes": true,
+    "tracked_diff_ignoring_cr_at_eol_is_empty": true,
+    "staged_diff_is_empty": true,
+    "note": "Raw Git status is retained. A CRLF/LF-only difference can appear dirty while the CR-at-EOL-normalized diff is empty."
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "java_version": "openjdk version \"21.0.4\" 2024-07-16 LTS\nOpenJDK Runtime Environment (Red_Hat-21.0.4.0+7-1) (build 21.0.4+7-LTS)\nOpenJDK 64-Bit Server VM (Red_Hat-21.0.4.0+7-1) (build 21.0.4+7-LTS, mixed mode, sharing)",
+    "java_version_probe": {
+      "command": [
+        "java",
+        "-version"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"21.0.4\" 2024-07-16 LTS\nOpenJDK Runtime Environment (Red_Hat-21.0.4.0+7-1) (build 21.0.4+7-LTS)\nOpenJDK 64-Bit Server VM (Red_Hat-21.0.4.0+7-1) (build 21.0.4+7-LTS, mixed mode, sharing)",
+      "available": true
+    }
+  },
+  "file_count": 73,
+  "files": [
+    {
+      "path": ".gitignore",
+      "category": "other_project_file",
+      "size_bytes": 710,
+      "sha256": "52d5a6a5a61bbec060f3dac286c9027207740f9ed25f13bef2a7fed8f94bcb35"
+    },
+    {
+      "path": "CLAUDE.md",
+      "category": "source_or_configuration",
+      "size_bytes": 2816,
+      "sha256": "a79837cb11f280c43410b985380efaa1e765962d64c195a576519a99c52d4019",
+      "normalized_text_sha256_lf": "9dbfa63a95cf1a419810e6b0e1ea6a321e3ea98efb3118f668323d29279ccb0c"
+    },
+    {
+      "path": "README.md",
+      "category": "source_or_configuration",
+      "size_bytes": 2875,
+      "sha256": "876a71229f824e90e0a7745210dd466ed3ddc62baf2481231f28aad8abbb6886",
+      "normalized_text_sha256_lf": "61c77932db2022666d94119198e9ce98dc2d1cdb6b7233f4f1f6146b9d028e6e"
+    },
+    {
+      "path": "backend/.env.example",
+      "category": "other_project_file",
+      "size_bytes": 162,
+      "sha256": "9ae4d28a26841de2c0e0d0e112229680ae11d598e422e6e25555fad82e700324"
+    },
+    {
+      "path": "backend/.gitattributes",
+      "category": "other_project_file",
+      "size_bytes": 40,
+      "sha256": "18be76f9008af08719be1d98d291e1286907ad6df86e7bd4e2dbed4ce0903fe8"
+    },
+    {
+      "path": "backend/.gitignore",
+      "category": "other_project_file",
+      "size_bytes": 503,
+      "sha256": "eb6ee79567451d6b267548043bef25b93973ebde1badadf9975bdd6b714e6ec1"
+    },
+    {
+      "path": "backend/mvnw",
+      "category": "other_project_file",
+      "size_bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02"
+    },
+    {
+      "path": "backend/mvnw.cmd",
+      "category": "other_project_file",
+      "size_bytes": 8481,
+      "sha256": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c"
+    },
+    {
+      "path": "backend/pom.xml",
+      "category": "source_or_configuration",
+      "size_bytes": 3442,
+      "sha256": "cda25ed9ef707a556b717f50dbc7c09bf7142319f52daa636dff08e6674a353d",
+      "normalized_text_sha256_lf": "e51ee11734c9412e4e008d0b57023df74d70c17bef07acfb560b188f7d7ad8e2"
+    },
+    {
+      "path": "backend/.mvn/wrapper/maven-wrapper.properties",
+      "category": "source_or_configuration",
+      "size_bytes": 171,
+      "sha256": "1f3cf0a7111d2b54736d1f89d7e93f1f143f8b3d5a58a5bb46e3b60b3eebd931",
+      "normalized_text_sha256_lf": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/BackendApplication.java",
+      "category": "source_or_configuration",
+      "size_bytes": 330,
+      "sha256": "bf0dd8c9ea18b2bc8e176c4e68e48e8bac2207b3c4ec66bbfd090d4c20aa58da",
+      "normalized_text_sha256_lf": "fd200f2df7e172b3198e749e99c982e821e1d1b868633ecbdf5386d5535ff059"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/controller/AlertController.java",
+      "category": "source_or_configuration",
+      "size_bytes": 81,
+      "sha256": "04580cd0b67b2cc22040af2907ca37f75c627d403a052ab5554d4db9858bfadb",
+      "normalized_text_sha256_lf": "199dc2550c17692312201715a87fea34878654ff38a6a951182e1f4b83a87039"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/controller/EnergyController.java",
+      "category": "source_or_configuration",
+      "size_bytes": 757,
+      "sha256": "95e27888b87a36627d18676cdc040240a249d50967fdcd7cfb3e30568da15946",
+      "normalized_text_sha256_lf": "d899faf3ad8720f19b6dca964b78f76ecf8428edf1dd3d1799f921e6c519f145"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/controller/MonitoringController.java",
+      "category": "source_or_configuration",
+      "size_bytes": 1097,
+      "sha256": "c69c45bd8376836902412db052eaf125df747e65668441cdc9222c73632f8637",
+      "normalized_text_sha256_lf": "d891d074f706ad0322fa9070f04c4b5b57b37a7b4debd93cb638a846129ed610"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/controller/PredictionController.java",
+      "category": "source_or_configuration",
+      "size_bytes": 999,
+      "sha256": "ae214bd61318897e219ea60a4a50d08b253b037448f39c6aa82e431a23f7ffca",
+      "normalized_text_sha256_lf": "6cd07bfce6b8c35e647a6b9a9ad4816a16354f942db18e051a95dd116186b7e0"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/controller/PrometheusController.java",
+      "category": "source_or_configuration",
+      "size_bytes": 896,
+      "sha256": "5a4465b70a4088c1b5e77ecb6348bafefa118325fbb71383ceb0777841262374",
+      "normalized_text_sha256_lf": "34eb7ef55776f88bab4ecfd851f533b6d35b7623be2d5eededcc3db30324c0de"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/controller/SchedulerController.java",
+      "category": "source_or_configuration",
+      "size_bytes": 1113,
+      "sha256": "3d78d07c12880c8a2f02dfffd661567a53d9c32956c6318e56c70612733833ae",
+      "normalized_text_sha256_lf": "afb038f43f1eb87dbe919f3250abd8095ac8725e099dc6b0baca7027a36324a9"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/controller/ServerController.java",
+      "category": "source_or_configuration",
+      "size_bytes": 1506,
+      "sha256": "caf2e0d7867f4afde001272df2e914a21954ad1f07df650c0984f03465f945ba",
+      "normalized_text_sha256_lf": "251a41921466b60f64bcbf382630426df5dd9e632959389e0f796d3afe020858"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/controller/TaskController.java",
+      "category": "source_or_configuration",
+      "size_bytes": 684,
+      "sha256": "ba7883406cbafb67cbf00c060b450c3249c666cb4347f3038fce69c5271c2628",
+      "normalized_text_sha256_lf": "5db5614cb03b998ab2e9aedb1a010b65ea76077cc519995c1a20d31a00b5d0e6"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/entity/Alert.java",
+      "category": "source_or_configuration",
+      "size_bytes": 67,
+      "sha256": "bae8e50ad4fdf47429b05150ff110bdb2011ab97a3e278eaddfc84715c515468",
+      "normalized_text_sha256_lf": "232e80bce9115cddfa03d456172c40e1ea809ce8a25575f64238ec6b8d36d9d6"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/entity/EnergyLog.java",
+      "category": "source_or_configuration",
+      "size_bytes": 1262,
+      "sha256": "cf8cdcae2e9b8be0b017250cdcea2481a3b116a69868aafc86b19b08ddd47944",
+      "normalized_text_sha256_lf": "f86e2094805905af7b3cb339d7177551ad210078a04c65f8f7d6e8f910022b93"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/entity/Prediction.java",
+      "category": "source_or_configuration",
+      "size_bytes": 1208,
+      "sha256": "7eb5d8aca8359c8b35e4862f71207b1052be1fa920dbf9db49f8e9b0c53015e7",
+      "normalized_text_sha256_lf": "5a4ea46cea93c4bd75e42fab7a1616d4f83c27cf64eae622528121ef90416ce1"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/entity/Server.java",
+      "category": "source_or_configuration",
+      "size_bytes": 679,
+      "sha256": "55d419c50db81fe0450bc496f5974567d01b7be738ccab59376becbfd84dab41",
+      "normalized_text_sha256_lf": "459f61ab71282a47ed95dbd4aca155afa34a9c93c47769eea1cc9886c578509a"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/entity/Task.java",
+      "category": "source_or_configuration",
+      "size_bytes": 1870,
+      "sha256": "83c78d9beb306e9ecdd1d54bafac1fa28bedbfd5deaf976642397e0e529423dd",
+      "normalized_text_sha256_lf": "9a19176b0fe2e8ab00e686c26621354875b9efec26bf4a5b850fd625bf6315b3"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/repository/AlertRepository.java",
+      "category": "source_or_configuration",
+      "size_bytes": 85,
+      "sha256": "2fb24a460716d5ff861fb385251604a40b20d0c0aef40685995d9b89035adef6",
+      "normalized_text_sha256_lf": "06c58b11c45903cd84b7ef9b2a5c09b965b3d6400caa181ff61f71d130402b33"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/repository/EnergyLogRepository.java",
+      "category": "source_or_configuration",
+      "size_bytes": 242,
+      "sha256": "86602ca4a58b906e0ba24df1b20622ed13d6737b8a09b8e5f37a057d05d8830a",
+      "normalized_text_sha256_lf": "fb79711ee58743b6d7a632bf93151d5ab81b4eaa9f8eb13b5f43dcb5ee5feeb2"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/repository/PredictionRepository.java",
+      "category": "source_or_configuration",
+      "size_bytes": 330,
+      "sha256": "ca41169a757f8aa96544a5102cd0a1be113e7d3c51d1aa6519049cd12b50a118",
+      "normalized_text_sha256_lf": "652528886ed848e8a7737cac9523f0f2878030da4e2739bee082e6145dfa5c4a"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/repository/ServerRepository.java",
+      "category": "source_or_configuration",
+      "size_bytes": 233,
+      "sha256": "c4114af599a031592961e3e280a7cee633d42c1c0818a64f2bd20ce51f008323",
+      "normalized_text_sha256_lf": "b7c9c20b3f7aec99fe3eb681aeee3ea64d53a166f1de13dafdcec38c1a5a1afc"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/repository/TaskRepository.java",
+      "category": "source_or_configuration",
+      "size_bytes": 225,
+      "sha256": "9e89426ec54e8a806e9837beb1073f9a8de698692fcb861ae5a0b308279c3369",
+      "normalized_text_sha256_lf": "ea7e3cf79fbc64592784bea2ff94ff767ed570a23c25a97c4fa02a01d6b58b8a"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/scheduler/GreenPulseSchedulerService.java",
+      "category": "source_or_configuration",
+      "size_bytes": 17765,
+      "sha256": "4d9cbaf9539b0b27269be71977671f01fc23b98da36ec469b9fe0bdab7654e49",
+      "normalized_text_sha256_lf": "d0f3a1dc704fdfd823dc96cbf821cb43882e225c3cfde9f92017dca61fbc3b43"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/scheduler/SchedulerRequest.java",
+      "category": "source_or_configuration",
+      "size_bytes": 2189,
+      "sha256": "8707e16fb73cbb6f798f476e25f20f696a1c4157a10f606c691185802cba5799",
+      "normalized_text_sha256_lf": "dba0d179ef10674b58cd54ccbe5e39d1a9744cccfa3ddfbac86211dcecce9158"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/scheduler/SchedulerResult.java",
+      "category": "source_or_configuration",
+      "size_bytes": 1851,
+      "sha256": "5ba26798785c9ca208f959ac54837e300c0497399c4683c23a377214629731b0",
+      "normalized_text_sha256_lf": "d450b654f8db4b00886eff7f5d64a7e5738a9833fed6506aa7c96bd670fb5b3c"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/scheduler/SchedulerService.java",
+      "category": "source_or_configuration",
+      "size_bytes": 144,
+      "sha256": "f84f590139b06981718464281352a7b91bb19c982d9788ae1cb3d528adf42650",
+      "normalized_text_sha256_lf": "45b94f79fae58e06a42215b7e19fb43a564df3c5e49cb22dadf77753ed40624c"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/service/AlertService.java",
+      "category": "source_or_configuration",
+      "size_bytes": 75,
+      "sha256": "2b6ef2ee47f2ee8799e7e01149d5266ce20d0c60d6e4a3d7714b7ee0f8d18eec",
+      "normalized_text_sha256_lf": "0de4503b52c7c5aef9022bfd7e2e1d0abd250ff3a75a9e733ec20ebfe80e1077"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/service/EnergyService.java",
+      "category": "source_or_configuration",
+      "size_bytes": 697,
+      "sha256": "521649f50244b509492aa52b050997010e1b4c33fcc6ea2fd7293bc283fa6f8e",
+      "normalized_text_sha256_lf": "1369f9a1e4058f95ebe8467b1bc10d3695f32a37ee7a4569a1b53138ca4c0d5c"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/service/MonitoringService.java",
+      "category": "source_or_configuration",
+      "size_bytes": 876,
+      "sha256": "6ee7667c33f874f5d17b9a0efdcd1bb70bcc4adb58d45674539e8e8bcc1f398c",
+      "normalized_text_sha256_lf": "ebe90b33eaaba2421110fd464d2e2ead532cf87d8ebe97ef1d915f8ebae5b788"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/service/PredictionService.java",
+      "category": "source_or_configuration",
+      "size_bytes": 897,
+      "sha256": "1b5e7170ec52660da43ac4aa95b07c20991ebaba557637befdac605e7df240aa",
+      "normalized_text_sha256_lf": "75cf2ba3496e1901cead4e0f9842a31285ec8629df38d296a0da46ae825938fa"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/service/PrometheusService.java",
+      "category": "source_or_configuration",
+      "size_bytes": 3011,
+      "sha256": "613e1eadb51b899110ccdd4f39956ba0a287cc390625b0e953143427e5e06fe9",
+      "normalized_text_sha256_lf": "a67d32c2e73f156c2d3c5a96948297ea508e6feb7e6dc8fcf9dc4d5289672e6e"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/service/ServerService.java",
+      "category": "source_or_configuration",
+      "size_bytes": 851,
+      "sha256": "092d8ebed8d3b66057435755020f8074660544ab45c77ade3df69c73975821d8",
+      "normalized_text_sha256_lf": "86cece27f12de028f020acd034d0ce09ae927aaee43a4859620e47f011ec058d"
+    },
+    {
+      "path": "backend/src/main/java/com/greenpulse/backend/service/TaskService.java",
+      "category": "source_or_configuration",
+      "size_bytes": 606,
+      "sha256": "e9cfea1776251ddb33278a06afdee7231e06a8b7659a755fe7416d4bdf4421cc",
+      "normalized_text_sha256_lf": "33a97c1a07b771858852cadd76041bdb90cefd096429e4377c839f1063430ee8"
+    },
+    {
+      "path": "backend/src/main/resources/application.properties",
+      "category": "source_or_configuration",
+      "size_bytes": 387,
+      "sha256": "8ed2fb5b325bf9f265f7fb2a8e092bcee89d05ebc6745180c7f16f75ef5636ca",
+      "normalized_text_sha256_lf": "394963ee9f6317ea87ccae93e2b6f9007cb1639ff9aab5cfd31737da5af30027"
+    },
+    {
+      "path": "backend/src/test/java/com/greenpulse/backend/BackendApplicationTests.java",
+      "category": "source_or_configuration",
+      "size_bytes": 228,
+      "sha256": "ecd2beaba45a981cad81bc31bd6dd3db30fd0da6b83ba6b5765b898d6c613642",
+      "normalized_text_sha256_lf": "a82420e5548620dd3c4854f20396d994d16a164d977ec9345a28628d573b9447"
+    },
+    {
+      "path": "docs/Experimental_Observations.txt",
+      "category": "other_project_file",
+      "size_bytes": 1158,
+      "sha256": "1ad0b0f678547db33666a903ad2885041fd50ea98d2022d9e0b51484339b10ce",
+      "normalized_text_sha256_lf": "31efb83f531fcab0bfbd09eaa70b1c47177472a7ff14da806285ca488c79dfca"
+    },
+    {
+      "path": "docs/SYSTEM_ARCHITECTURE.md",
+      "category": "source_or_configuration",
+      "size_bytes": 4485,
+      "sha256": "9e87b02d82e84d7c636f7e5c1e0c492c42285b1d4c1174876a66ab98a616a185",
+      "normalized_text_sha256_lf": "990ace372f62886141b04992aaa8aaf32ea812a243a74688fca50527bee50fc8"
+    },
+    {
+      "path": "experiments/outputs/M1_Baseline_10.txt",
+      "category": "experiment_output_or_record",
+      "size_bytes": 2845,
+      "sha256": "a441e3fcc861c93cde4cb26a1d2702abe95dfd445c87d8ab4a6ff03267cf1738",
+      "normalized_text_sha256_lf": "88c34bb90e86dfa92305d0a995b7e11c44bf4e9ac7af001f990536e2319bf394"
+    },
+    {
+      "path": "experiments/outputs/M1_Baseline_20.txt",
+      "category": "experiment_output_or_record",
+      "size_bytes": 2845,
+      "sha256": "11e556ad03bd3c0897dd3c483fac73d07c956239155d47cf7f6968434b7a0ecf",
+      "normalized_text_sha256_lf": "144963189b2df8a1139bf994f865264e54f8c3c491e7a3dd1c7c543512c269fc"
+    },
+    {
+      "path": "experiments/outputs/M2_Energy_10.txt",
+      "category": "experiment_output_or_record",
+      "size_bytes": 2844,
+      "sha256": "80053e651e5aef860a03543180fd01a39dffdbfe1b7aa97a4c3b28685def17f5",
+      "normalized_text_sha256_lf": "83e83d64f377369065ae077c96b8b3b8feca5c1b1b28f769111a9c606154affa"
+    },
+    {
+      "path": "experiments/outputs/M3_Carbon_10.txt",
+      "category": "experiment_output_or_record",
+      "size_bytes": 2844,
+      "sha256": "8a8ba61c644fa6b842a2fd7876ab7db4d8d6878c1bdd1991a721246b85d62174",
+      "normalized_text_sha256_lf": "36ead7037d2705ad2abcf60882b6260c1c6a17ae8136ac6df3bd06ed037812a3"
+    },
+    {
+      "path": "experiments/outputs/M4_Energy_Carbon_10.txt",
+      "category": "experiment_output_or_record",
+      "size_bytes": 2845,
+      "sha256": "4ed86936f3ab33ac9a0abab46f9677d27cf22a6555436c87961e478fd161f0bd",
+      "normalized_text_sha256_lf": "81244f5fc2309e14ca1a3965e8a29c73f6fea3306bc25a0bb5023d5598e1e23a"
+    },
+    {
+      "path": "experiments/outputs/M5_Full_10.txt",
+      "category": "experiment_output_or_record",
+      "size_bytes": 2844,
+      "sha256": "80053e651e5aef860a03543180fd01a39dffdbfe1b7aa97a4c3b28685def17f5",
+      "normalized_text_sha256_lf": "83e83d64f377369065ae077c96b8b3b8feca5c1b1b28f769111a9c606154affa"
+    },
+    {
+      "path": "experiments/outputs/M5_Full_20.txt",
+      "category": "experiment_output_or_record",
+      "size_bytes": 2846,
+      "sha256": "4868e1be9a2bc7b26e7244dad538b725e313405fef1ac09eb377628fbb15fd9f",
+      "normalized_text_sha256_lf": "42109743c87b1875932f754551489d5b568df65a4faebddfe0dc5d731bc4eb44"
+    },
+    {
+      "path": "experiments/outputs/M8_NoConsolidation_10.txt",
+      "category": "experiment_output_or_record",
+      "size_bytes": 2845,
+      "sha256": "464ffdca4fdf15f670b27172a1d5181b66ca51a9d558dcde4652fedf86a83e5a",
+      "normalized_text_sha256_lf": "538463e5901b80a417a0aeccbbe60e594d79311a29fb63df63bd0d456b8cee97"
+    },
+    {
+      "path": "experiments/outputs/M9_Normalized_NoConsolidation_10.txt",
+      "category": "experiment_output_or_record",
+      "size_bytes": 2845,
+      "sha256": "d5bd3076fcd72737518b73a93defc24fbb937f0bc7050fe0e9abb8ac7af5d028",
+      "normalized_text_sha256_lf": "bc670a1974b0ce27525b309dedf1183eeed816f58daa7db12d73694da84b93b7"
+    },
+    {
+      "path": "experiments/sensitivity/Sleep_Power_Sensitivity.csv",
+      "category": "experiment_output_or_record",
+      "size_bytes": 172,
+      "sha256": "f8dfd061d1465f10d5d8de3939922b3cc1f61e7535eb01d3948b889a91a63f50",
+      "normalized_text_sha256_lf": "454c20d9329b26c56703b130bd005cb59b5acb5ff58071d5ea3ffe0f043a6d40"
+    },
+    {
+      "path": "experiments/summaries/GreenPulse_Experimental_Results.csv",
+      "category": "experiment_output_or_record",
+      "size_bytes": 536,
+      "sha256": "f575cecbce7654d37f91b7c28c04424b477f7500aa762b23ac0c9b8f3b5917ab",
+      "normalized_text_sha256_lf": "eb553f5fb709f6165e4ee7dd8f20d67ad18487717f5a439fcd4a246c6aa1c230"
+    },
+    {
+      "path": "simulation/preprocess.py",
+      "category": "source_or_configuration",
+      "size_bytes": 2086,
+      "sha256": "885b802032bc5f6157d6b341dba7c5c6d30a8414f3b9213a7bed882d3423e6a5",
+      "normalized_text_sha256_lf": "4fd5c9fa0ae84794566e35e7ff1f3ab1a8d16473caa1d41ee49f0d8f238ead15"
+    },
+    {
+      "path": "simulation/datasets/greenpulse_tasks.csv",
+      "category": "dataset_or_data",
+      "size_bytes": 243219,
+      "sha256": "e0bad489f2c57453049aeb9f571052e5182d3569d1e31b0b39cec3b14a32d067",
+      "normalized_text_sha256_lf": "a11d6ab72d3397fdb987d3ec7e82dcb17626005c88f92077d90b5f2d72ac158c"
+    },
+    {
+      "path": "simulation/datasets/greenpulse_test.csv",
+      "category": "dataset_or_data",
+      "size_bytes": 4385,
+      "sha256": "958106c5c90fdfe1c78f72cb0827d6b8aec14e7375cc09d14f3c9da8842fce6a",
+      "normalized_text_sha256_lf": "389be13c0e1ec2df058ceac906b845f477f7cf60df796b5cf038cb1df4f5a81d"
+    },
+    {
+      "path": "simulation/src/AblationScheduler.java",
+      "category": "source_or_configuration",
+      "size_bytes": 39750,
+      "sha256": "fc77ffb52e1163f3065c1a21cba36a1bb0e54c27db3b5fc0f7459329bf587a23",
+      "normalized_text_sha256_lf": "fc77ffb52e1163f3065c1a21cba36a1bb0e54c27db3b5fc0f7459329bf587a23"
+    },
+    {
+      "path": "simulation/src/AblationScheduler_ConsolidationTest.java",
+      "category": "source_or_configuration",
+      "size_bytes": 39958,
+      "sha256": "efec95584e7f1a312f534169a87c95a1a8f57f272f540dc95d0f58e829793a80",
+      "normalized_text_sha256_lf": "efec95584e7f1a312f534169a87c95a1a8f57f272f540dc95d0f58e829793a80"
+    },
+    {
+      "path": "simulation/src/BaselineScheduler.java",
+      "category": "source_or_configuration",
+      "size_bytes": 24210,
+      "sha256": "4af1669f324bbdc18fa0c0f335f03761dc67bab8e27a2666c77de79bff3a4a66",
+      "normalized_text_sha256_lf": "c2850b6c04155fcde098fed186f77c5dd3acac1c592e8ee767ca453c5620339f"
+    },
+    {
+      "path": "simulation/src/BestFitScheduler.java",
+      "category": "source_or_configuration",
+      "size_bytes": 22591,
+      "sha256": "359f9d51ad59ae0f72e448f25f36e267c83ab656fc2e4e1b3d05e6ef260d3df0",
+      "normalized_text_sha256_lf": "359f9d51ad59ae0f72e448f25f36e267c83ab656fc2e4e1b3d05e6ef260d3df0"
+    },
+    {
+      "path": "simulation/src/CarbonIntensityModel.java",
+      "category": "source_or_configuration",
+      "size_bytes": 3530,
+      "sha256": "c92c83b376553b905a9b81076b1d6ecacad065ac32534281585f099dbcc78009",
+      "normalized_text_sha256_lf": "3e4b48eb04bd38d194ebf27d8aa54d1a5118d92d9a1ee957b4aa4fc0cdfe6f49"
+    },
+    {
+      "path": "simulation/src/FirstFitScheduler.java",
+      "category": "source_or_configuration",
+      "size_bytes": 22778,
+      "sha256": "575b6a850c02f8722cee678c0117950044915eae6f83bdb1fc315b3878b03363",
+      "normalized_text_sha256_lf": "e896964f72d1918d44fb8d1a1268bd62821b3197da0bd3b84d9ed4e9b325f245"
+    },
+    {
+      "path": "simulation/src/MBFDScheduler.java",
+      "category": "source_or_configuration",
+      "size_bytes": 22855,
+      "sha256": "5847a974787bb9aec93dc00253af81b68dd13a1349462ec3eb13c859e1103a7e",
+      "normalized_text_sha256_lf": "5847a974787bb9aec93dc00253af81b68dd13a1349462ec3eb13c859e1103a7e"
+    },
+    {
+      "path": "simulation/src/PrometheusClient.java",
+      "category": "source_or_configuration",
+      "size_bytes": 3077,
+      "sha256": "8e0bccb811b41701a7506196b51ba6df27e3d396d837b7752d26e59832bae4a4",
+      "normalized_text_sha256_lf": "274e222fcd4c60eb3490ac76257a9a6f6bb4ee71d927668fcbf3019f73ae4ae9"
+    },
+    {
+      "path": "simulation/src/Scheduler.java",
+      "category": "source_or_configuration",
+      "size_bytes": 33829,
+      "sha256": "f5feed18ea217b4556954d1a54a927bab0efe4b9c6ce389c39f807017ff904fc",
+      "normalized_text_sha256_lf": "da31c63951fe8b93b50bbc3f4256508db90cb8c4074c9f4abd2a23e3b24e0d91"
+    },
+    {
+      "path": "simulation/src/SchedulerDynamicCarbon.java",
+      "category": "source_or_configuration",
+      "size_bytes": 41320,
+      "sha256": "3b0e5ecef469bd68616ebc2c1ef130d85c0dfed72a60b5b09bc4255a935cfc80",
+      "normalized_text_sha256_lf": "3b0e5ecef469bd68616ebc2c1ef130d85c0dfed72a60b5b09bc4255a935cfc80"
+    },
+    {
+      "path": "simulation/src/Server.java",
+      "category": "source_or_configuration",
+      "size_bytes": 8689,
+      "sha256": "5b0b32b972086ada436ab4250a89279eb7fb5aa3870875dce7b45143be70c98f",
+      "normalized_text_sha256_lf": "bb37cf49aed925d2d855b017af4d58afaa8b8bce62138d7c7bf35efa1c0d94da"
+    },
+    {
+      "path": "simulation/src/SleepPowerConfig.java",
+      "category": "source_or_configuration",
+      "size_bytes": 138,
+      "sha256": "0bf14e1dd61243de47c416306b4956e8bf28c2456a6e519ae4fd54f2336587e0",
+      "normalized_text_sha256_lf": "b30db71c1c3d29f77c85d9cb4f28590652a49b8d3137e050ef155618c63a42fc"
+    },
+    {
+      "path": "simulation/src/Task.java",
+      "category": "source_or_configuration",
+      "size_bytes": 704,
+      "sha256": "7c9ff2be0ca34a7325d8d175fbcb7223c2db758a35974b9dd561d7e2247ad907",
+      "normalized_text_sha256_lf": "ac41ab002b2d29ed482ba25c91d60e2cda0207f38ceba14af949c5060b48917c"
+    },
+    {
+      "path": "simulation/src/TimeVaryingCarbonIntensityModel.java",
+      "category": "source_or_configuration",
+      "size_bytes": 6914,
+      "sha256": "d6b583ed9b9071d0f1d9d8acf24514650a3d8c1dae16a48780c0f7b8c5e24c8b",
+      "normalized_text_sha256_lf": "d6b583ed9b9071d0f1d9d8acf24514650a3d8c1dae16a48780c0f7b8c5e24c8b"
+    },
+    {
+      "path": "tools/make_manifest.py",
+      "category": "source_or_configuration",
+      "size_bytes": 9544,
+      "sha256": "0e4f7d334316251613393b08c24c25428506ff62c7bee69f15181ef8967bd3e0",
+      "normalized_text_sha256_lf": "0e4f7d334316251613393b08c24c25428506ff62c7bee69f15181ef8967bd3e0"
+    }
+  ],
+  "source_constants_detected": {
+    "simulation/src/Scheduler.java": {
+      "weights_and_model": [
+        "static double CPU_WEIGHT = 0.20;",
+        "static double MEMORY_WEIGHT = 0.20;",
+        "static double ENERGY_WEIGHT = 0.25;",
+        "static double CARBON_WEIGHT = 0.25;",
+        "static double CONSOLIDATION_WEIGHT = 0.10;",
+        "static int MODEL = 5;"
+      ],
+      "dataset_path": [
+        "DATASET_FILE = \"greenpulse_tasks.csv\";"
+      ]
+    }
+  },
+  "known_historical_issue": {
+    "file": "experiments/outputs/M5_Full_10.txt",
+    "issue": "Previously identified as mislabeled in the audit. This script records and hashes the file but does not rename, edit, or infer corrected contents.",
+    "handling": "Preserve unchanged; resolve in a separately documented verification step."
+  },
+  "limitations": [
+    "This manifest describes files present in this repository snapshot; it cannot prove the provenance of an absent raw dataset.",
+    "A dataset checksum identifies the exact file present, not the upstream source URL, extraction query, filtering rules, or license.",
+    "The generated timestamp changes on each independently generated manifest; per-file SHA-256 values are the stability check."
+  ]
+}

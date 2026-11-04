@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "run_id": "E1_m4_231_ord",
+  "started_utc": "2026-11-03T15:44:23.565797+00:00",
+  "finished_utc": "2026-11-03T15:44:27.140104+00:00",
+  "status": "success",
+  "exit_code": 0,
+  "project_root": "C:\\Users\\Monisha\\Desktop\\GreenPulse_Master",
+  "git_commit": "24b936b55d0e6e45cfeed9142307c57cafddbb94",
+  "git_status_short": "?? experiments/SHA256SUMS\n?? experiments_v2/\n?? provenance/\n?? tools/",
+  "parameters": {
+    "policy_id": "m4",
+    "policy_label": "GreenPulse energy + carbon (M4)",
+    "main_class": "Scheduler",
+    "java_arguments": [
+      "4",
+      "0.10"
+    ],
+    "sleep_power_ratio": 0.1,
+    "sleep_power_ratio_source": "SleepPowerConfig default; legacy policy classes ignore CLI args",
+    "server_iteration_order": [
+      2,
+      3,
+      1
+    ],
+    "server_iteration_order_note": "Only list traversal order changes; server identities and initial active state are unchanged.",
+    "dataset": "simulation/datasets/greenpulse_tasks.csv"
+  },
+  "toolchain": {
+    "java_version": "openjdk version \"21.0.4\" 2024-07-16 LTS\nOpenJDK Runtime Environment (Red_Hat-21.0.4.0+7-1) (build 21.0.4+7-LTS)\nOpenJDK 64-Bit Server VM (Red_Hat-21.0.4.0+7-1) (build 21.0.4+7-LTS, mixed mode, sharing)",
+    "javac_version": "javac 21.0.4",
+    "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "source_transformation": {
+    "applied_in_temporary_build_copy_only": true,
+    "description": "Inject server-list sort immediately after server construction and before task loading.",
+    "transformed_java_source_sha256": {
+      "BestFitScheduler.java": "cbd819fdb4e2ecc02940969a7afa2a9f224474f8b9828886334273b12149cd26",
+      "FirstFitScheduler.java": "91297c03186a933015fb974ca9643ebe89d12fb883288333e18717a2b0acf099",
+      "MBFDScheduler.java": "bedbb2b42e4f7ca019c03f7e83b38067ef37ab7bc4e1db2fa6e179c41c8609fc",
+      "Scheduler.java": "8e9a00ba008f95b012b7d20ae4e1cb505ccdb63d2196734d7cfc2ed8c9cd2ecb"
+    }
+  },
+  "commands": {
+    "compile": [
+      "javac",
+      "-d",
+      "<temporary_build_dir>",
+      "<temporary source copies>"
+    ],
+    "run": [
+      "java",
+      "-cp",
+      "C:\\Users\\Monisha\\AppData\\Local\\Temp\\greenpulse_e1_build_an8_fp46\\classes",
+      "Scheduler",
+      "4",
+      "0.10"
+    ]
+  },
+  "working_directory": "simulation/datasets",
+  "hashes": {
+    "dataset_sha256": "e0bad489f2c57453049aeb9f571052e5182d3569d1e31b0b39cec3b14a32d067",
+    "original_java_sources_sha256": {
+      "simulation/src/AblationScheduler.java": "fc77ffb52e1163f3065c1a21cba36a1bb0e54c27db3b5fc0f7459329bf587a23",
+      "simulation/src/AblationScheduler_ConsolidationTest.java": "efec95584e7f1a312f534169a87c95a1a8f57f272f540dc95d0f58e829793a80",
+      "simulation/src/BaselineScheduler.java": "4af1669f324bbdc18fa0c0f335f03761dc67bab8e27a2666c77de79bff3a4a66",
+      "simulation/src/BestFitScheduler.java": "359f9d51ad59ae0f72e448f25f36e267c83ab656fc2e4e1b3d05e6ef260d3df0",
+      "simulation/src/CarbonIntensityModel.java": "c92c83b376553b905a9b81076b1d6ecacad065ac32534281585f099dbcc78009",
+      "simulation/src/FirstFitScheduler.java": "575b6a850c02f8722cee678c0117950044915eae6f83bdb1fc315b3878b03363",
+      "simulation/src/MBFDScheduler.java": "5847a974787bb9aec93dc00253af81b68dd13a1349462ec3eb13c859e1103a7e",
+      "simulation/src/PrometheusClient.java": "8e0bccb811b41701a7506196b51ba6df27e3d396d837b7752d26e59832bae4a4",
+      "simulation/src/Scheduler.java": "f5feed18ea217b4556954d1a54a927bab0efe4b9c6ce389c39f807017ff904fc",
+      "simulation/src/SchedulerDynamicCarbon.java": "3b0e5ecef469bd68616ebc2c1ef130d85c0dfed72a60b5b09bc4255a935cfc80",
+      "simulation/src/Server.java": "5b0b32b972086ada436ab4250a89279eb7fb5aa3870875dce7b45143be70c98f",
+      "simulation/src/SleepPowerConfig.java": "0bf14e1dd61243de47c416306b4956e8bf28c2456a6e519ae4fd54f2336587e0",
+      "simulation/src/Task.java": "7c9ff2be0ca34a7325d8d175fbcb7223c2db758a35974b9dd561d7e2247ad907",
+      "simulation/src/TimeVaryingCarbonIntensityModel.java": "d6b583ed9b9071d0f1d9d8acf24514650a3d8c1dae16a48780c0f7b8c5e24c8b"
+    },
+    "stdout_sha256": "845e2b40c0aac59fd431da8a3552ac097317814ef2c582bb8a5488762cb5f0d9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
