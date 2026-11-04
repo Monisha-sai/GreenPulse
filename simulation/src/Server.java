@@ -343,6 +343,33 @@ public class Server {
                 );
     }
 
+    // =========================================================
+    // BUSY HORIZON (read-only, used by Model 10 only)
+    // =========================================================
+    //
+    // Returns max(0, latest end time of the tasks currently running
+    // on this server - t), in seconds.
+    //
+    // It is derived ONLY from runningTasks (actual task end times),
+    // never from the 'active' flag. Consequently an 'active' server
+    // that has no running tasks - i.e. Server-1 before its first task,
+    // because the Server constructor starts Server-1 active - returns
+    // 0.0 and is treated like a sleeping server by the Model 10
+    // energy estimator. Tasks with endTime <= t contribute 0.
+    //
+    // This method does not modify any server state.
+    //
+    public double busyHorizon(double t) {
+        double horizon = 0.0;
+        for (RunningTask runningTask : runningTasks) {
+            double remaining = runningTask.endTime - t;
+            if (remaining > horizon) {
+                horizon = remaining;
+            }
+        }
+        return horizon;
+    }
+
 
     // =========================================================
     // CPU UTILIZATION

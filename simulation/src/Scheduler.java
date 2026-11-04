@@ -768,7 +768,9 @@ public class Scheduler {
         );
 
         System.out.println(
-                "Task Energy      : Incremental energy estimate"
+                "Task Energy      : " + (MODEL == 10
+                        ? "Incremental energy + active-server idle extension"
+                        : "Incremental energy estimate")
         );
 
         System.out.println(
@@ -871,6 +873,17 @@ public class Scheduler {
     CONSOLIDATION_WEIGHT = 0.00;
     break;
 
+            // Model 10: same weights as Model 4. It differs from
+            // Model 4 ONLY in the incremental-energy estimator
+            // (active-server idle-extension correction, see
+            // selectGreenPulseServer). Consolidation weight stays 0.
+            case 10:
+                CPU_WEIGHT = 0.20;
+                MEMORY_WEIGHT = 0.20;
+                ENERGY_WEIGHT = 0.30;
+                CARBON_WEIGHT = 0.30;
+                CONSOLIDATION_WEIGHT = 0.00;
+                break;
             default:
                 MODEL = 5;
                 CPU_WEIGHT = 0.20;
@@ -952,6 +965,44 @@ public class Scheduler {
                     candidate.incrementalPower
                             * (task.duration / 3600.0)
                             / 1000.0;
+
+            // -------------------------------------------------
+            // MODEL 10 ONLY: corrected marginal energy
+            //
+            //   dE = k*c*d + (P_idle - P_sleep) * max(0, d - B)
+            //
+            //   k = (P_peak - P_idle) / C_cpu   (W per CPU core)
+            //   c = task CPU request, d = task duration (s)
+            //   B = server.busyHorizon(t): seconds until the server's
+            //       currently running tasks have all finished
+            //       (0 for a server with no running task)
+            //
+            // For a sleeping/empty server B = 0, so dE equals the
+            // legacy estimate. For a server that is already busy the
+            // legacy estimate omitted the extra awake time
+            // (P_idle - P_sleep) * max(0, d - B).
+            //
+            // Initially active but empty Server-1: B = 0, so it is
+            // charged the full activation premium (treated like a
+            // sleeping server). Wake-up energy/latency are NOT modelled.
+            //
+            // Models 1-9 never execute this block.
+            // -------------------------------------------------
+            if (MODEL == 10) {
+                double busyHorizon =
+                        server.busyHorizon(task.startTime);
+                double extensionSeconds =
+                        Math.max(0.0, task.duration - busyHorizon);
+                double dynamicPowerW =
+                        (server.peakPower - server.idlePower)
+                                * (task.cpuRequired / server.cpuCapacity);
+                candidate.incrementalEnergy =
+                        (dynamicPowerW * task.duration
+                                + (server.idlePower - server.sleepPower)
+                                * extensionSeconds)
+                                / 3600.0
+                                / 1000.0;
+            }
 
             // Carbon intensity
 
