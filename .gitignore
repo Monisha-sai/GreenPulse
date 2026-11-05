@@ -55,3 +55,7 @@ datasets/raw/*
 # Generated experiment outputs
 simulation/output/
 simulation/outputs/
+# AI development instructions
+CLAUDE.md
+
+GREENPULSE_HANDOVER.txt

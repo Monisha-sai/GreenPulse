@@ -31,8 +31,9 @@ POLICIES = {
     "online-min-delta-power": (
         "MBFDScheduler", [], "Online minimum incremental power (not canonical MBFD)"
     ),
-    "m4": ("Scheduler", ["4", "0.10"], "GreenPulse energy + carbon (M4)"),
+        "m4": ("Scheduler", ["4", "0.10"], "GreenPulse energy + carbon (M4)"),
     "m5": ("Scheduler", ["5", "0.10"], "GreenPulse full model (M5)"),
+    "m10": ("Scheduler", ["10", "0.10"], "GreenPulse corrected energy model (M10)"),
 }
 
 ORDER_TARGETS = {

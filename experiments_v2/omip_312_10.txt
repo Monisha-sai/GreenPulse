@@ -1,0 +1,47 @@
+
+==========================================
+       GREENPULSE ESTIMATOR-MATCHED OMIP
+==========================================
+Sleep Power Ratio : 10%
+Server Order      : 312
+Task Order        : Chronological online arrival
+Placement Rule    : Minimum corrected marginal energy
+Carbon in Choice  : No (measurement only)
+Energy Estimator  : M10 idle-extension corrected estimator
+
+--------------- RESULTS -----------------
+Total Tasks       : 5000
+Scheduled Tasks   : 4723
+Unscheduled Tasks : 277
+Success Rate      : 94.46%
+CPU Failures      : 277
+Memory Failures   : 0
+CPU + Memory Fail : 0
+Other Failures    : 0
+Total Energy      : 12.752682 kWh
+Total Carbon      : 10.327037 kg CO2
+
+-------- SERVER ENERGY DISTRIBUTION -----
+Server-3 : 164 tasks
+   Region       : Western
+   Carbon Int.  : 0.8900 kg CO2/kWh
+   Energy       : 3.194032 kWh
+   Carbon       : 2.842689 kg CO2
+   Idle Power   : 180.00 W
+   Peak Power   : 300.00 W
+Server-1 : 607 tasks
+   Region       : Northern
+   Carbon Int.  : 0.7335 kg CO2/kWh
+   Energy       : 3.259331 kWh
+   Carbon       : 2.390719 kg CO2
+   Idle Power   : 150.00 W
+   Peak Power   : 250.00 W
+Server-2 : 3952 tasks
+   Region       : Southern
+   Carbon Int.  : 0.8086 kg CO2/kWh
+   Energy       : 6.299319 kWh
+   Carbon       : 5.093630 kg CO2
+   Idle Power   : 120.00 W
+   Peak Power   : 220.00 W
+
+Estimator-matched OMIP simulation completed.

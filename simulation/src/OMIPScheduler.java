@@ -10,8 +10,9 @@ import java.util.List;
  * minimum M10-compatible corrected marginal energy. Carbon is measurement only.
  *
  * Run from simulation/datasets:
- *   java OMIPScheduler 0.10
- *   java OMIPScheduler 0.20
+ *   java OMIPScheduler 0.10 123
+ *   java OMIPScheduler 0.20 321
+ * Server order must be one of: 123, 132, 213, 231, 312, 321.
  */
 public class OMIPScheduler {
     private static final String DATASET_FILE = "greenpulse_tasks.csv";
@@ -33,26 +34,34 @@ public class OMIPScheduler {
 
     public static void main(String[] args) {
         double sleepRatio = 0.10;
+        String serverOrder = "123";
 
-        if (args.length > 1) {
-            System.err.println("Usage: java OMIPScheduler [sleep-ratio]");
+        if (args.length > 2) {
+            System.err.println("Usage: java OMIPScheduler [sleep-ratio] [server-order]");
             System.exit(2);
         }
-        if (args.length == 1) {
+        if (args.length >= 1) {
             try {
                 sleepRatio = Double.parseDouble(args[0]);
             } catch (NumberFormatException ex) {
-                System.err.println("Invalid sleep ratio. Use 0.10 or 0.20.");
+                System.err.println("Invalid sleep ratio. Use a number between 0.0 and 1.0.");
                 System.exit(2);
             }
+        }
+        if (args.length == 2) {
+            serverOrder = args[1];
         }
         if (!Double.isFinite(sleepRatio) || sleepRatio < 0.0 || sleepRatio > 1.0) {
             System.err.println("Sleep ratio must be between 0.0 and 1.0.");
             System.exit(2);
         }
+        if (!isValidServerOrder(serverOrder)) {
+            System.err.println("Server order must be one of: 123, 132, 213, 231, 312, 321.");
+            System.exit(2);
+        }
 
         SleepPowerConfig.SLEEP_POWER_RATIO = sleepRatio;
-        initializeServers();
+        initializeServers(serverOrder);
 
         List<Task> tasks = loadTasks(DATASET_FILE);
         if (tasks.isEmpty()) {
@@ -143,15 +152,30 @@ public class OMIPScheduler {
         printResults(
             tasks.size(), scheduledTasks, unscheduledTasks,
             cpuFailures, memoryFailures, cpuMemoryFailures, otherFailures,
-            sleepRatio
+            sleepRatio, serverOrder
         );
     }
 
-    private static void initializeServers() {
+    private static boolean isValidServerOrder(String order) {
+        return "123".equals(order)
+            || "132".equals(order)
+            || "213".equals(order)
+            || "231".equals(order)
+            || "312".equals(order)
+            || "321".equals(order);
+    }
+
+    private static void initializeServers(String order) {
         servers.clear();
-        servers.add(new Server("Server-1", 6.0, 100.0, 150.0, 250.0));
-        servers.add(new Server("Server-2", 6.0, 100.0, 120.0, 220.0));
-        servers.add(new Server("Server-3", 6.0, 100.0, 180.0, 300.0));
+
+        Server server1 = new Server("Server-1", 6.0, 100.0, 150.0, 250.0);
+        Server server2 = new Server("Server-2", 6.0, 100.0, 120.0, 220.0);
+        Server server3 = new Server("Server-3", 6.0, 100.0, 180.0, 300.0);
+
+        Server[] serversById = {null, server1, server2, server3};
+        for (char digit : order.toCharArray()) {
+            servers.add(serversById[digit - '0']);
+        }
     }
 
     /**
@@ -187,8 +211,7 @@ public class OMIPScheduler {
         }
         return bestServer;
     }
-
-    private static List<Task> loadTasks(String filename) {
+       private static List<Task> loadTasks(String filename) {
         List<Task> tasks = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
@@ -221,7 +244,7 @@ public class OMIPScheduler {
     private static void printResults(
         int totalTasks, int scheduledTasks, int unscheduledTasks,
         int cpuFailures, int memoryFailures, int cpuMemoryFailures,
-        int otherFailures, double sleepRatio
+        int otherFailures, double sleepRatio, String serverOrder
     ) {
         double successRate = totalTasks == 0 ? 0.0 : scheduledTasks * 100.0 / totalTasks;
         double totalEnergy = 0.0;
@@ -237,6 +260,7 @@ public class OMIPScheduler {
         System.out.println("       GREENPULSE ESTIMATOR-MATCHED OMIP");
         System.out.println("==========================================");
         System.out.printf("Sleep Power Ratio : %.0f%%%n", sleepRatio * 100.0);
+        System.out.println("Server Order      : " + serverOrder);
         System.out.println("Task Order        : Chronological online arrival");
         System.out.println("Placement Rule    : Minimum corrected marginal energy");
         System.out.println("Carbon in Choice  : No (measurement only)");
